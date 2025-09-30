@@ -12,7 +12,7 @@ function render() {
   const container = document.createElement("div");
   container.classList.add("container");
   app.appendChild(container);
-  container.appendChild((parties_soon));
+  container.appendChild(parties_soon()); 
   container.appendChild(party_detail());
 }
 function parties_soon() {
@@ -96,4 +96,4 @@ async function fetch_details(id) {
   await fetchParties();
   render();
 })();
-}
+
